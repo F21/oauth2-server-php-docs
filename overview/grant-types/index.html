@@ -86,7 +86,9 @@ Supported grant types are as follows:</p>
 <pre><code>Create your own grant type by implementing the `OAuth2\GrantType\GrantTypeInterface` and adding it to the OAuth2 Server object.
 </code></pre>
 </li>
-</ol><p>When submitting a request for an access_token using either the 'Authorization Code' or 'Resource Owner Password
+</ol>
+
+<p>When submitting a request for an access_token using either the 'Authorization Code' or 'Resource Owner Password
 Credential' grant, a refresh_token is provided. However, When using the refresh_token from above to request a new
 access_token, a new refresh_token is not provided. The spec does not strictly require a refresh_token be granted but it
 is <a href="http://tools.ietf.org/html/rfc6749#section-6">still possible to do it</a>.</p>
@@ -103,6 +105,8 @@ issued, but you can easily configure this to do so by setting <code>'always_issu
 <span class="local-variable">$server</span>-&gt;addGrantType(<span class="keyword">new</span> <span class="constant">OAuth2</span>\<span class="constant">GrantType</span>\<span class="constant">RefreshToken</span>(<span class="local-variable">$storage</span>));
 <span class="local-variable">$server</span>-&gt;addGrantType(<span class="keyword">new</span> <span class="constant">OAuth2</span>\<span class="constant">GrantType</span>\<span class="constant">AuthorizationCode</span>(<span class="local-variable">$storage</span>));</code></pre></div></div>
 </div>
+
+
       </div>
 
     <div id="js-sidebar" class="sidebar-shell">

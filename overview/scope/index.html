@@ -84,7 +84,7 @@ implementation, or by taking advantage of the existing <code>OAuth2\Storage\Memo
 <div class="langspec">Php</div>
 <div class="CodeRay"><div class="code"><pre class="highlight"><code class="language-php"><span class="keyword">class</span> <span class="class">OAuth2ScopeTable</span> <span class="keyword">extends</span> <span class="constant">Doctrine_Table</span> <span class="keyword">implements</span> <span class="constant">OAuth2</span>\<span class="constant">Storage</span>\<span class="constant">ScopeInterface</span>
 {
-    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">getDefaultScope</span>()
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">getDefaultScope</span>(<span class="local-variable">$client_id</span> = <span class="predefined-constant">null</span>)
     {
         <span class="comment">//...</span>
     }
@@ -165,6 +165,8 @@ available scopes on your server object, like so:</p>
 <div class="CodeRay"><div class="code"><pre class="highlight"><code class="language-php"><span class="local-variable">$scope</span> = <span class="keyword">new</span> <span class="constant">OAuth2</span>\<span class="constant">Scope</span>(<span class="predefined">array</span>(<span class="string"><span class="delimiter">'</span><span class="content">onescope</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">twoscope</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">redscope</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">bluescope</span><span class="delimiter">'</span></span>));
 <span class="local-variable">$server</span>-&gt;setScopeUtil(<span class="local-variable">$scope</span>);</code></pre></div></div>
 </div>
+
+
       </div>
 
     <div id="js-sidebar" class="sidebar-shell">
